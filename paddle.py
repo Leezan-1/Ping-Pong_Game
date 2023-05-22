@@ -6,6 +6,7 @@ PADDLE_WALK = 50    # distance paddles walk when button is pressed
 
 
 class Paddle(Turtle):
+    # CREATES PADDLE SHAPE, SIZE AND POSITION
     def __init__(self, side):
         super().__init__()
         self.shape('square')

@@ -2,7 +2,7 @@ from turtle import Turtle
 FONT = ('Courier', 60, 'normal')
 PROMPT_FONT = ('Courier', 30, 'normal')
 ALIGNMENT = 'center'
-SCORECARD_POSITION = [(30, 230), (-30, 230), (0, 0)]
+SCORECARD_POSITION = [(100, 230), (-100, 230), (0, 0)]
 
 
 class Scoreboard(Turtle):
@@ -26,6 +26,11 @@ class Scoreboard(Turtle):
 
     def update_score(self):
         self.write(f"{self.score}", False, ALIGNMENT, FONT)
+
+    def got_score(self):
+        self.clear()
+        self.score += 1
+        self.update_score()
 
     def start_prompt(self):
         self.write("Press Enter to START", False, ALIGNMENT, PROMPT_FONT)
